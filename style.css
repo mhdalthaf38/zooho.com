@@ -1,0 +1,753 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+hr{
+    opacity: 30%;
+}
+
+.container
+{
+  position: relative;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    background-image:url('blueleaf.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: 0.3fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas: "welcome welcome welcome "
+    "nav maincontent maincontent  "
+    "nav maincontent maincontent ";
+
+    
+   
+}
+
+div.welcome
+{
+
+    justify-content: center;
+    grid-area: welcome;
+}
+.welcome p
+{
+   display: grid;
+   padding-top: 20px;
+   text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 3px;
+    overflow: hidden;
+    background: url('redblue.jpg');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    animation: animate 10s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+}
+
+@keyframes animate {
+    0%{
+        background-position: -500%;
+    }
+    100%{
+        background-position: 500%;
+    }
+}
+
+
+/*navbar*/
+
+nav
+{
+   
+    grid-area:nav;
+    justify-content: center;
+    text-decoration: none;
+    font-family: sans-serif;
+   width: 100%;
+   
+    
+   
+}
+
+   
+nav h2
+{
+    color:#01fbff;
+    font-size: 75px;
+    font-weight: 100;
+   
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    background-repeat: no-repeat;
+    background-size: 99%;
+    animation: animate 2s linear infinite;
+    background: url('redblue.jpg');
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+nav p{
+    color: #fff;
+    opacity: 50%;
+    text-align: center;
+    padding: 5px;
+}
+hr
+{
+    
+    opacity: 40%;
+}
+.menuul
+{
+   
+   
+  
+    margin-top: 30px;
+   text-align: center;
+    justify-content: center;
+    
+    
+}
+ .menuul li
+{
+    display: block;
+    line-height: 70px;
+   
+   
+}
+ .menuul li a
+ {
+    color: rgb(250, 246, 246);
+    font-size: 20px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+.menuul a.active,.menuul a:hover
+{
+    color: #23bbf3;
+    
+}
+.checkbtn
+{
+    font-size: 25px;
+    color: whitesmoke;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    
+
+
+}
+#check
+{
+    display: none;
+
+}
+.icons{
+    margin-top: 20px;
+    display: flex;
+    padding: 15px 0;
+    justify-content: center;
+}
+.icons a{
+    color: #fff;
+}
+.icons li
+{
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+.icons li i
+{
+    font-size: 20px;
+    opacity: 0.8;
+}
+.icons li i:hover
+{
+    color:#ec33b9 ;
+}
+
+
+/*main content*/
+.maincontent
+{
+  
+    grid-area: maincontent;
+   
+
+}
+.intro 
+{
+    margin-top: 120px;
+margin-left: 70px;
+
+
+}
+.intro h3
+ {
+   font-size: 80px;
+   color: white;
+   font-family: sans-serif;
+   font-weight: 100;
+   color: rgb(26, 174, 166);
+   background: url('redblue.jpg');
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  
+   
+}
+.intro a
+{
+font-size: 50px;
+opacity: 50%;
+color: rgb(255, 255, 255);
+}
+.intro p
+{
+color: #fff;
+opacity: 50%;
+font-family: sans-serif;
+letter-spacing: 5px;
+padding-top: 10px;
+padding-left: 50px;
+
+}
+
+button {
+    margin-top: 40px;
+    margin-left: 30px;
+   
+   
+
+   
+}
+
+
+
+
+ button {
+
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 1;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color:  #08def4;
+    border-radius: 0;
+    background: transparent;
+    border-top-color:#08def4;
+    border-left-color:#ec33b9;
+    border-bottom-color:#ec33b9;
+    border-right-color:  #08def4;
+    border-width: 1px;
+    outline: none;
+    box-shadow: inset 0 0 0 0  #08def4;
+    transition: ease-out 0.5s;
+  
+    
+
+}
+button:hover{
+   
+    box-shadow:  inset 150px 0px 0px 0px #01c0ea;
+    color:black;
+    font-weight: 500;
+}
+
+
+
+/*about us*/
+.section{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    height: 100vh;
+    width: 100%;
+   position: relative;
+padding: 20px;
+    font-family: 'Playfair Display', serif;
+    background: #000000;
+    
+   
+}
+.image{
+    background: url("pjo.jpeg") center/cover no-repeat;
+   
+}
+.content{
+    background:black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+    color: aliceblue;
+    margin-left: 50px;
+    padding-top: 0;
+  
+  
+}
+.content a{
+   
+    color: #ec33b9;
+}
+.content span2{
+    color: #01c0ea;
+}
+.content h2{
+   text-align: left;
+    font-size: 70px;
+    font-family:  sans-serif;
+    letter-spacing: 6px;
+    font-weight: 100;
+    padding-bottom: 150px;
+   
+}
+
+.content p{
+    padding-bottom: 150px;
+    font-size: 20px;
+    font-weight: 300;
+    
+    width: 100%;
+    text-align: left;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.content p span
+{
+    font-family: sans-serif;
+    color:#ec33b9 ;
+    font-size: 30px;
+    transition: 0.5s;
+}
+.content p span1{
+    color: #01c0ea;
+}
+/*contact mre*/
+
+.contact{
+    position: relative;
+    min-height: 80vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  
+ background: rgb(0, 0, 0);
+ 
+
+}
+.contact .mycontent{
+    max-width: 800px;
+    text-align: center;
+    display: grid;
+    background-color: black;
+    font-family: sans-serif;
+   
+   
+   
+}
+.contact .mycontent h2{
+    font-size: 50px;
+    font-weight: 500;
+    
+    background: url('redblue.jpg');
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    font-family: sans-serif;
+    height: 65px;
+    
+}
+.contact .mycontent hr{
+    padding: 0;
+    margin: 0;
+}
+.contact .mycontent span{
+    color: #01c0ea;
+}
+.f{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 75px;
+    
+}
+.quotes{
+    display: grid;
+    color: #fff;
+}
+.quotes p{
+    padding-bottom: 100px;
+    font-weight: 300;
+    color: white;
+    font-size: 30px;
+    height: 20px;
+    font-family: sans-serif;
+    
+}
+
+.quotes span1{
+    text-transform: uppercase;
+    color: #01c0ea;
+}
+
+.quotes h4{
+text-transform: uppercase;
+height:10px;
+font-family: sans-serif;
+
+}
+
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   gap: 30px;
+   padding-top:60px;
+   box-sizing: border-box;
+   
+  
+
+}
+.contact-form h2{
+    text-align: center;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+
+.inputBox{
+    position: relative;
+    width: 100%;
+    padding-top: 15px;
+    box-sizing: border-box;
+    
+    
+
+}
+.inputBox input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.25 );
+    background: rgb(1, 1, 1);
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transform: 0.5s;
+    box-sizing: border-box;
+
+}
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-family: sans-serif;
+    font-size: 1em;
+    color:rgba(255,255,255,0.25 );
+    text-transform: uppercase;
+    transition: 0.5s;
+    box-sizing: border-box;
+} 
+
+.submitBtn input{
+    width: 100px;
+    height: 30px;
+    background: transparent;
+    color: #01c0ea;
+    border:1px solid #01c0ea;
+    border-radius: 5px;
+}
+.submitBtn input:hover{
+    box-shadow:  inset 150px 0px 0px 0px #01c0ea;
+    color: black;
+    border-color: rgb(255, 255, 255);
+}
+
+
+
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color:  #01c0ea;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: black;
+    border-left: 1px solid #01c0ea;
+    border-right: 1px solid #01c0ea;
+    letter-spacing: 0.2em;
+    
+}
+.inputBox input:valid ,
+.inputBox input:focus
+{
+    border: 1px solid #01c0ea;
+}
+.inputBox textarea:valid ~ span,
+.inputBox textarea:focus ~ span{
+    color: #01c0ea;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: black;
+    border-left: 1px solid  #01c0ea;
+    border-right: 1px solid #01c0ea;
+    letter-spacing: 0.2em;
+}
+.inputBox textarea:valid ,
+.inputBox textarea:focus
+{
+    border: 1px solid #01c0ea
+}
+.inputBox textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.25 );
+    background: black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transform: 0.5s;
+
+}
+@media (max-width: 990px){
+div .image{
+    display: none;
+}
+.section{
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+.content{
+   
+    display:block;
+  
+  
+}
+
+}
+@media (max-width: 850px){
+    .checkbtn{
+        display: block;
+    }
+    .segment{
+        display: none;
+    }
+    .icons{
+        display: none;
+    }
+    .menuul{
+        position: absolute;
+        display: grid;
+        width: 100%;
+        height: auto;
+        background:rgb(0, 0, 0);
+       opacity: 80%;
+       margin-top:60px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        
+
+    }
+    .menuul hr{
+        display: none;
+    }
+     .menuul li{
+        display:list-item;
+    }
+     .menuul li a{
+        font-size: 15px;
+
+    }
+    a:hover,a.active{
+        background: none;
+        color: #23bbf3;
+        
+    }
+    #check:checked ~ ul{
+        left: 0;
+
+
+}
+.container
+{
+   
+    grid-template-columns: 1fr 1fr 0.01fr;
+    grid-template-rows: 0.2fr 1fr 1fr ;
+    grid-template-areas: " welcome welcome welcome "
+    " maincontent maincontent  nav  ";
+  
+    
+   
+}
+.intro h3
+ {
+   font-size: 70px;
+  
+   
+}
+.intro 
+{
+    margin-top: 100px;
+margin-left: 60px;
+
+}
+.content{
+    margin-left: 10px;
+}
+.content h2{
+    font-size: 60px;
+    letter-spacing: 3px;
+    padding-bottom: 75px;
+}
+}
+@media (max-width: 620px){
+
+    .welcome p
+{
+   padding-top: 20px;
+    font-size: 1.3em;
+}
+    .intro h3
+ {
+   font-size: 60px;
+  
+   
+}
+
+.intro 
+{
+    margin-top: 75px;
+margin-left: 40px;
+
+}
+}
+@media (max-width: 525px){
+    .intro 
+    {
+        margin-top: 30px;
+    margin-left: 30px;
+    
+    }
+    .intro h3
+    {
+      font-size: 50px;
+     
+      
+   }
+ 
+   .intro p
+   {
+   
+   letter-spacing: 3px;
+   padding-top: 10px;
+   padding-left: 10px;
+   
+   }
+   button{
+    width: 150px;
+    height: 45px;
+    font-size: 13px;
+    margin-top: 40px;
+    margin-left: 5px;
+   
+}
+
+.container
+{
+   
+    grid-template-columns: 1fr 1fr 0.01fr;
+    grid-template-rows: 0.2fr 1fr ;
+    grid-template-areas: " welcome welcome welcome "
+    " maincontent maincontent  nav  ";
+    background-size:600px 100vh;
+    background-repeat:no-repeat;
+   
+}
+.checkbtn
+{
+    font-size: 25px;
+    color: whitesmoke;
+    margin-right: 30px;
+   line-height: 0;
+   margin-top: -40px;
+
+
+}
+
+
+.content p{
+    font-size: 15px;
+    padding-bottom: 0px;
+}
+.content p span
+{
+    font-family: sans-serif;
+    color:#ec33b9 ;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.contact .mycontent h2{
+    font-size: 40px;
+    font-weight: 500;
+    height: 50px;
+    padding-bottom: 100px;
+    
+}
+.f{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    grid-template-columns: 1fr;
+    padding-bottom: 75px;
+    
+}
+.quotes h4{
+    text-transform: uppercase;
+    height:15px;
+    font-family: sans-serif;
+    font-size: 15px;
+    
+    }
+    .quotes p{
+        padding-bottom: 75px;
+        font-weight: 300;
+        color: white;
+        font-size: 20px;
+        height: 20px;
+        font-family: sans-serif;
+        
+    }
+    .contact-form{
+        padding-top:0px;
+    }
+
+}
