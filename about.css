@@ -1,0 +1,52 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Headings */
+h1 {
+    color: #ff6600;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Features List */
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features ul li {
+    font-size: 18px;
+    padding: 8px 0;
+}
+
+/* Call-to-Action */
+.cta {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ff6600;
+}

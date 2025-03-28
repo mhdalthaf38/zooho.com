@@ -9,28 +9,10 @@ hr{
     opacity: 30%;
 }
 
-.container
-{
-  position: relative;
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    background-image:url('blueleaf.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-template-columns: 0.3fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr 1fr;
-    grid-template-areas: "welcome welcome welcome "
-    "nav maincontent maincontent  "
-    "nav maincontent maincontent ";
-
-    
-   
-}
 
 div.welcome
 {
-
+background-color: #fff;
     justify-content: center;
     grid-area: welcome;
 }
@@ -44,7 +26,7 @@ div.welcome
     font-size: 2em;
     letter-spacing: 3px;
     overflow: hidden;
-    background: url('redblue.jpg');
+    background-color: #ed6f0f;
     background-repeat: no-repeat;
     background-size: 90%;
     animation: animate 10s linear infinite;
@@ -64,18 +46,90 @@ div.welcome
 
 
 /*navbar*/
+.container {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 110vh;
+    background-image: url('homeimage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+    background-blend-mode: darken; /* Blend the overlay with the image */
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "nav"
+        "maincontent";
+}
 
-nav
-{
-   
-    grid-area:nav;
-    justify-content: center;
-    text-decoration: none;
+/* Navbar */
+nav {
+    grid-area: nav;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.segment {
+    display: flex;
+    align-items: center;
+}
+
+.segment h2 {
+    color: #01fbff;
+    font-size: 40px;
+    font-weight: bold;
     font-family: sans-serif;
-   width: 100%;
-   
-    
-   
+}
+
+/* Navigation Menu */
+.menuul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuul li {
+    margin: 0 15px;
+}
+
+.menuul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.menuul a.active, .menuul a:hover {
+    color: #ed6f0f;
+}
+
+/* Social Media Icons */
+.icons {
+    display: flex;
+}
+
+.icons li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.icons li a {
+    color: black;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.icons li a:hover {
+    color: #ed6f0f;
 }
 
    
@@ -91,12 +145,12 @@ nav h2
     background-repeat: no-repeat;
     background-size: 99%;
     animation: animate 2s linear infinite;
-    background: url('redblue.jpg');
+    background-color: #ed6f0f;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 nav p{
-    color: #fff;
+    color: #ed6f0f;
     opacity: 50%;
     text-align: center;
     padding: 5px;
@@ -126,14 +180,14 @@ hr
 }
  .menuul li a
  {
-    color: rgb(250, 246, 246);
+    color: black;
     font-size: 20px;
     font-family: sans-serif;
     text-transform: uppercase;
 }
 .menuul a.active,.menuul a:hover
 {
-    color: #23bbf3;
+    color: #ed6f0f;
     
 }
 .checkbtn
@@ -161,7 +215,7 @@ hr
     justify-content: center;
 }
 .icons a{
-    color: #fff;
+    color: #000000;
 }
 .icons li
 {
@@ -176,7 +230,7 @@ hr
 }
 .icons li i:hover
 {
-    color:#ec33b9 ;
+    color:#ed6f0f ;
 }
 
 
@@ -198,11 +252,11 @@ margin-left: 70px;
 .intro h3
  {
    font-size: 80px;
-   color: white;
+   color: #fff;
    font-family: sans-serif;
    font-weight: 100;
    color: rgb(26, 174, 166);
-   background: url('redblue.jpg');
+background-color: #fffefd;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
   
@@ -212,7 +266,7 @@ margin-left: 70px;
 {
 font-size: 50px;
 opacity: 50%;
-color: rgb(255, 255, 255);
+color:#ed6f0f;
 }
 .intro p
 {
@@ -239,23 +293,23 @@ button {
 
  button {
 
-    width: 170px;
+    width: 250px;
     height: 45px;
     font-size: 15px;
     font-weight: 1;
     letter-spacing: 1px;
     font-family: sans-serif;
-    text-transform: uppercase;
-    color:  #08def4;
+    
+    color:  #ffffff;
     border-radius: 0;
     background: transparent;
-    border-top-color:#08def4;
-    border-left-color:#ec33b9;
-    border-bottom-color:#ec33b9;
-    border-right-color:  #08def4;
+    border-top-color:#ffffff;
+    border-left-color:#ffffff;
+    border-bottom-color:#ffffff;
+    border-right-color:  #ffffff;
     border-width: 1px;
     outline: none;
-    box-shadow: inset 0 0 0 0  #08def4;
+    box-shadow: inset 0 0 0 0  #ed6f0f;
     transition: ease-out 0.5s;
   
     
@@ -263,8 +317,8 @@ button {
 }
 button:hover{
    
-    box-shadow:  inset 150px 0px 0px 0px #01c0ea;
-    color:black;
+    box-shadow:  inset 250px 0px 0px 0px green;
+    color:rgb(255, 255, 255);
     font-weight: 500;
 }
 
@@ -278,8 +332,8 @@ button:hover{
     width: 100%;
    position: relative;
 padding: 20px;
-    font-family: 'Playfair Display', serif;
-    background: #000000;
+   
+    background: #ffffff;
     
    
 }
@@ -346,7 +400,7 @@ padding: 20px;
     align-items: center;
     padding: 30px;
   
- background: rgb(0, 0, 0);
+ background: rgb(255, 255, 255);
  
 
 }
@@ -354,7 +408,7 @@ padding: 20px;
     max-width: 800px;
     text-align: center;
     display: grid;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     font-family: sans-serif;
    
    
@@ -364,7 +418,7 @@ padding: 20px;
     font-size: 50px;
     font-weight: 500;
     
-    background: url('redblue.jpg');
+    background-color: #000000;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
     font-family: sans-serif;
@@ -749,5 +803,15 @@ margin-left: 40px;
     .contact-form{
         padding-top:0px;
     }
-
+    .footer {
+        background-color: #222; /* Dark background */
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 14px;
+    }
+    
 }
